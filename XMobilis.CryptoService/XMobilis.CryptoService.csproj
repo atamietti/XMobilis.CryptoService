@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!--<TargetFramework>net5.0</TargetFramework>-->
+     <TargetFrameworks Condition="'$(LibraryFrameworks)'==''">netstandard2.0;net5.0</TargetFrameworks>
+    <TargetFrameworks Condition="'$(LibraryFrameworks)'!=''">$(LibraryFrameworks)</TargetFrameworks>
+    <PackageId>XMobilis.CryptoService</PackageId>
+    <Authors>XMobilis</Authors>
+    <Copyright>XMobilis</Copyright>
+    <Owners>André Tamietti</Owners>
+    <Title>XMobilis.CryptoService</Title>
+    <PackageLicense>https://github.com/atamietti/XMobilis.CryptoService/edit/main/LICENSE</PackageLicense>
+    <PackageLicenseUrl>https://github.com/atamietti/XMobilis.CryptoService/edit/main/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/atamietti/XMobilis.CryptoService/</PackageProjectUrl>
+    <PackageVersion>1.0.2</PackageVersion>
+  </PropertyGroup>
+
+</Project>
