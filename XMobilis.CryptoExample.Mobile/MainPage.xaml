@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XMobilis.CryptoExample.Mobile.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Cipher Example" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" />
+        </Frame>
+
+
+        <Label Text="Cipher Key:" HorizontalTextAlignment="Start" TextColor="Black" FontSize="28"/>
+        <Label Text="Properties will be Ciphered with the key bellow    "/>
+
+        <Entry Text="{Binding CipherKey}" Placeholder="Key" />
+
+        <Button Text="Gen Key" BackgroundColor="#2196F3" TextColor="White" Command="{Binding KeyCommand}" HorizontalOptions="Center" CornerRadius="10"/>
+
+        <Label Text="Login:" HorizontalTextAlignment="Start" TextColor="Black" FontSize="22"/>
+        <Label Text="Property setted to not Cipher"/>
+        <Entry Text="{Binding U.Login, Mode=TwoWay}" Placeholder="Login" />
+
+        <Label Text="Name:" HorizontalTextAlignment="Start" TextColor="Black" FontSize="22"/>
+        <Label Text="Property setted to cipher always the same key: 'keyToCipher' "/>
+        <Entry Text="{Binding U.Name, Mode=TwoWay}" Placeholder="Name" />
+
+        <Label Text="Password:" HorizontalTextAlignment="Start" TextColor="Black" FontSize="22"/>
+        <Label Text="{Binding CipherKey, StringFormat='Property setted by Generated Key: {0}'}"/>
+        <Entry Text="{Binding U.Password, Mode=TwoWay}" Placeholder="Password"/>
+
+        <Button Text="Cipher" BackgroundColor="#2196F3" TextColor="White"  Command="{Binding CipherCommand}"  HorizontalOptions="Center" CornerRadius="10"/>
+
+
+
+    </StackLayout>
+
+</ContentPage>

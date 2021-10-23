@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="VM\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="VM\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XMobilis.CryptoExample.Model\XMobilis.CryptoExample.Model.csproj" />
+    <ProjectReference Include="..\XMobilis.CryptoService\XMobilis.CryptoService.csproj" />
+  </ItemGroup>
+</Project>

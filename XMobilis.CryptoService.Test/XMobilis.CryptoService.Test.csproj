@@ -21,5 +21,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\XMobilis.CryptoService\XMobilis.CryptoService.csproj" />
+    <ProjectReference Include="..\XMobilis.CryptoExample.Model\XMobilis.CryptoExample.Model.csproj" />
   </ItemGroup>
 </Project>

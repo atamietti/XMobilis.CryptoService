@@ -12,7 +12,7 @@
     <PackageLicense>https://github.com/atamietti/XMobilis.CryptoService/edit/main/LICENSE</PackageLicense>
     <PackageLicenseUrl>https://github.com/atamietti/XMobilis.CryptoService/edit/main/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/atamietti/XMobilis.CryptoService/</PackageProjectUrl>
-    <PackageVersion>1.0.2</PackageVersion>
+    <PackageVersion>1.0.3</PackageVersion>
   </PropertyGroup>
 
 </Project>

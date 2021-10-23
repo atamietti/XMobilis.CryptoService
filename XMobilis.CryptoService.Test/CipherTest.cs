@@ -1,9 +1,10 @@
 ﻿using System;
+using XMobilis.CryptoExample.Model;
 using Xunit;
 
 namespace XMobilis.CryptoService.Test
 {
-    public class UnitTest1
+    public class CipherTest
     {
         string key;
         CryptoService cService;
@@ -18,10 +19,10 @@ namespace XMobilis.CryptoService.Test
             //Initial Model
             var modelTest = new ModelTest()
             {
-                User = "atamietti",
+                Login = "atamietti",
                 Name = "Andre",
                 Password = "0@011#222&3&33ad444",
-                Model2 = new ModelTest() { User = "jseph", Name = "Joseph", Password = "$31$5@188972$2020@@" }
+                Model2 = new ModelTest() { Login = "jseph", Name = "Joseph", Password = "$31$5@188972$2020@@" }
             };
 
             var pwd = modelTest.Password;
@@ -83,22 +84,14 @@ namespace XMobilis.CryptoService.Test
         }
     }
 
-    public class ModelTest : CryptoModel
+    public class ModelTest : User
     {
 
-        public string User { get; set; } //this property wont be able to cipher
-
-        [Encrypted] //this proerty will be cipher by the current CryptoRequestKey Value
-        public string Password { get; set; }
-
-        [Encrypted("keyToCipher")] //this property will be Cipher by this value: "keyToCipher"
-        public string Name { get; set; }
-
-
-        public DateTime Date { get; set; } // for now it is only for string and classess
+        [Encrypted] //This class properties will be Cipher
+        public override string Login { get => base.Login; set => base.Login = value; }
 
         [Encrypted] //This class properties will be Cipher
-        public ModelTest Model2 { get; set; }
+        public User Model2 { get; set; }
 
     }
 

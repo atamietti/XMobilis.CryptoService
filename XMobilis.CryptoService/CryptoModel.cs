@@ -1,8 +1,7 @@
 ﻿namespace XMobilis.CryptoService
 {
-    public class CryptoModel
+    public abstract class CryptoModel
     {
 
     }
 }
-    
